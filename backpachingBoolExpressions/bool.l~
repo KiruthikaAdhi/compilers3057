@@ -1,0 +1,59 @@
+%{
+#include<stdio.h>
+#include "y.tab.h"
+int yywrap(void);
+%}
+IDENTIFIER [a-zA-Z][0-9a-zA-z]*
+%%
+>|<|!=|== { 
+
+            //printf("relop->%s\n",yytext);
+			yylval.str = strdup(yytext);
+			return RELOP;
+		  }
+[()]    { 
+            //printf("para->%s\n",yytext);                
+            return *yytext;
+        }
+!|&&|\|\| {
+            //printf("logi->%s\n",yytext);
+            return *yytext;
+        }
+"true"  {
+            return TRUE;
+
+        }
+"false"  {
+            return FALSE;
+
+        }
+
+[0-9]+  {
+                //printf("id->%s",yytext);
+                yylval.str = strdup(yytext);
+                return NUM;    
+
+        }
+{IDENTIFIER} {
+                //printf("id->%s",yytext);
+                yylval.str = strdup(yytext);
+                return ID;    
+            }
+[$]     {
+            //printf("end->%s\n",yytext);
+            return *yytext;
+        }
+[\n\t ] {   }
+.       {
+            printf("Invalid character");
+        }
+%%
+int yywrap(){
+    return 0;
+}
+/*int main(){
+    while(1){
+        yylex();
+    }
+
+}*/
