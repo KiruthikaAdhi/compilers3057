@@ -1,0 +1,6 @@
+typedef struct node{
+	char data[300];
+	int k;
+	struct node* left;
+	struct node* right;
+}NODE;

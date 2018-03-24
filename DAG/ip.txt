@@ -1,0 +1,4 @@
+{int l,m,n,x,y,d,c,k,i,j,e,f,g;int a[5];float b[3][4];l=m+n;if(x<100 || x>200 && x!=y){d=c;a[k]=b[i][j];}else{e=f+g;}}$
+{int x,y;if(x>300){if(y<400){int d,c,k,i,j;int a[5];float b[3][4];d=c;a[k]=b[i][j];}}}$
+{int x,y;if(x>300){if(y<400){int d,c,k,i,j;int a[5];float b[3][4];d=c;a[k]=b[i][j];}}else{int e,f,g;e=f+g;}}$
+{int x;if(x>200){int j,k,l,m,n,o,p,q,i,a;int b[2][2][3][2][3][2][2][3][2];a=b[i][j][k][l][m][n][o][p][q];}else{int d,c ; d=c;}}$
