@@ -1,0 +1,46 @@
+	symTable'\n'								{
+													printf("Valid Entry\n");
+												}
+	|
+	;
+symTable:
+	func										{
+													printf("Valid function declaration");
+												}
+	|decls										{
+													printf ("Valid Declaration\n");
+												}
+	;
+func: 
+	TYPE IDENTIFIER'('argList ')'				{
+													printf("func");
+												}	
+	;
+argList:
+	arg											{
+													printf("arg");	
+												}
+	|argList ',' arg								{
+													printf("arglist,arg");
+												}	
+	;
+arg:
+	TYPE IDENTIFIER							{
+													printf("The type is %s\n",(char*)$1);
+												}	
+	;
+decls:
+	decls decl
+	| decl
+	;
+decl:
+	TYPE idlist ';'								{
+													printf("The type is %s\n",(char*)$1);
+												}
+	;
+
+idlist:
+	IDENTIFIER','idlist
+	| IDENTIFIER
+	;
+		

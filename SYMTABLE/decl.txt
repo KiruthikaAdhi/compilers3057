@@ -1,0 +1,12 @@
+{
+int a;
+int fun(int a,int b);
+int c;
+{
+float a;
+int c;
+char b;
+}
+int d;
+int g;
+}
