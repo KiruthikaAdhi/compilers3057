@@ -54,9 +54,9 @@ To compile:
 
 	yacc -d <name>.y
 
-        lex <name>.l
+	lex <name>.l
 
-        cc lex.yy.c y.tab.c
+	cc lex.yy.c y.tab.c
 
 To execute:
 
