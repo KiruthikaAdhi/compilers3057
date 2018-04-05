@@ -54,6 +54,8 @@ FLOWGRAPH:
 
 Execution:
 
+The code is developed using gcc version 7.2.0 (Ubuntu 7.2.0-8ubuntu3.2) 
+
 To compile:
 
 	yacc -d <name>.y
