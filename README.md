@@ -46,7 +46,11 @@ backpatchingBoolExpressions:
 
 syntaxTree:
 
-        It constructs syntax tree for arithmetic expressions
+        It constructs syntax tree for arithmetic expressions.
+	
+FLOWGRAPH:
+	
+	It constructs flow graph from the generated Basic Blocks.
 
 Execution:
 
